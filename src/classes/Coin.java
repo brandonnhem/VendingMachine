@@ -1,6 +1,6 @@
 package classes;
 
-public class Coin {
+public class Coin implements Comparable {
 	
 	private final static double PENNY = 0.01;
 	private final static double NICKEL = 0.05;
@@ -39,5 +39,38 @@ public class Coin {
 		{
 			value = 0.0;
 		}
+	}
+	
+	public double getValue()
+	{
+		return value;
+	}
+	
+	public String getName()
+	{
+		return name;
+	}
+	
+	public int compareTo(Object otherObject)
+	  {
+		  Coin otherCoin = (Coin) otherObject;
+		  if (getValue() < otherCoin.getValue())
+		  {
+			  return -1;
+		  }
+		  if (getValue() > otherCoin.getValue())
+		  {
+			  return 1;
+		  }
+		  else
+		  {
+			  return 0;
+		  }
+	  }
+	
+	public String toString()
+	{
+		String coinString = "Coin Type: " + name + " Value: " + value;
+		return coinString;
 	}
 }

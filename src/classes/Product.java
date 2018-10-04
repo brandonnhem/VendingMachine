@@ -3,23 +3,43 @@ package classes;
 public class Product {
 	
 	private String name;
-	private double price;
+	private double cost;
 
 	public Product()
 	{
 		this.name = "";
-		this.price = 0.0;
+		this.cost = 0.0;
 	}
 	
-	public Product(String name, double price)
+	public Product(String name, double cost)
 	{
 		this.name = name;
-		this.price = price;
+		this.cost = cost;
+	}
+	
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+	
+	public String getName()
+	{
+		return name;
+	}
+	
+	public void setCost(double cost)
+	{
+		this.cost = cost;
+	}
+	
+	public double getCost()
+	{
+		return cost;
 	}
 	
 	public String toString()
 	{
-		String product = "Name: " + name + " Price: " + price;
-		return product;
+		String productString = "Name of Product: " + name + " Cost: " + cost;
+		return productString;
 	}
 }
