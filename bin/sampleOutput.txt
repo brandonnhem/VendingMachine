@@ -1,0 +1,47 @@
+Products for sale: 
+Name of Product: Mint Cost: 0.75 Quantity: 5
+Name of Product: Crunch Cost: 0.65 Quantity: 3
+Name of Product: Cheetos Cost: 1.25 Quantity: 0
+Name of Product: Doritos Cost: 1.25 Quantity: 3
+Name of Product: Lays Cost: 1.25 Quantity: 3
+Name of Product: Juice Cost: 1.55 Quantity: 5
+Name of Product: Gatorade Cost: 1.75 Quantity: 4
+Name of Product: Coke Cost: 1.55 Quantity: 3
+Name of Product: Chocolate Cookie Cost: 1.05 Quantity: 2
+
+You inserted 2.61
+Thank you for purchasing Mint for 0.75
+You inserted 1.00 for Cheetos
+Out of stock.
+You inserted 1.00 for Coke
+Insufficient coins, please add more.
+
+Products for sale: 
+Name of Product: Mint Cost: 0.75 Quantity: 4
+Name of Product: Crunch Cost: 0.65 Quantity: 3
+Name of Product: Cheetos Cost: 1.25 Quantity: 0
+Name of Product: Doritos Cost: 1.25 Quantity: 3
+Name of Product: Lays Cost: 1.25 Quantity: 3
+Name of Product: Juice Cost: 1.55 Quantity: 5
+Name of Product: Gatorade Cost: 1.75 Quantity: 4
+Name of Product: Coke Cost: 1.55 Quantity: 3
+Name of Product: Chocolate Cookie Cost: 1.05 Quantity: 2
+
+I'm the operator, it's my job to empty the cash out of the vending machine and restock items!
+2.61 worth of coins taken out of the machine
+I'll also restock those Cheetos!
+
+Products for sale: 
+Name of Product: Mint Cost: 0.75 Quantity: 4
+Name of Product: Crunch Cost: 0.65 Quantity: 3
+Name of Product: Doritos Cost: 1.25 Quantity: 3
+Name of Product: Lays Cost: 1.25 Quantity: 3
+Name of Product: Juice Cost: 1.55 Quantity: 5
+Name of Product: Gatorade Cost: 1.75 Quantity: 4
+Name of Product: Coke Cost: 1.55 Quantity: 3
+Name of Product: Chocolate Cookie Cost: 1.05 Quantity: 2
+Name of Product: Cheetos Cost: 1.25 Quantity: 4
+
+User has bought Items purchased: 
+>>Name of Product: Mint Cost: 0.75 Quantity: 1
+
