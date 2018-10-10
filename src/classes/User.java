@@ -1,70 +1,28 @@
 package classes;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class User {
 
-	private ArrayList<Coin> wallet;
 	private ArrayList<Product> purchasedItems;
-	private double total;
+	int items;
 	
 	public User()
 	{
-		wallet = new ArrayList<Coin>();
 		purchasedItems = new ArrayList<Product>();
-	}
-	
-	public double getTotal()
-	{
-		for(int i = 0; i <= wallet.size() - 1; i++)
-		{
-			total += wallet.get(i).getValue();
-		}
-		return total;
-	}
-	
-	public void setTotal(double total)
-	{
-		this.total = total;
-	}
-	
-	public void clearWallet()
-	{
-		wallet.clear();
-	}
-	
-	public void addCoin(Coin coin)
-	{
-		wallet.add(coin);
-		total += coin.getValue();
-	}
-	
-	public void removeCoin(Coin coin)
-	{
-		for(int i = 0; i <= wallet.size() - 1; i++)
-		{
-			if(wallet.contains(coin))
-			{
-				total -= wallet.get(i).getValue();
-				wallet.remove(coin);
-			}
-		}
-	}
-	
-	public void sortWallet()
-	{
-		Collections.sort(wallet);
+		this.items = 0;
 	}
 	
 	public void addPurchase(Product nameOfProduct)
 	{
 		purchasedItems.add(nameOfProduct);
+		items++;
 	}
 	
 	public void removePurchase(Product nameOfProduct)
 	{
 		purchasedItems.remove(nameOfProduct);
+		items--;
 	}
 	
 	public void clearPurchases()
@@ -72,9 +30,25 @@ public class User {
 		purchasedItems.clear();
 	}
 	
+	public void setItems(int items)
+	{
+		this.items = items;
+	}
+	
+	public int getItems()
+	{
+		return items;
+	}
+	
 	public String toString()
 	{
-		String walletString = "Total in wallet: " + total;
+		String walletString = "Items purchased: \n";
+		for(int i = 0; i <= purchasedItems.size() - 1; i++)
+		{
+			walletString += ">>";
+			walletString += purchasedItems.get(i).toString();
+			walletString += "\n";
+		}
 		return walletString;
 	}
 }

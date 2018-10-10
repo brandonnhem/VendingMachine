@@ -1,44 +1,37 @@
 package classes;
 
-public class Coin implements Comparable {
-	
-	private final static double PENNY = 0.01;
-	private final static double NICKEL = 0.05;
-	private final static double DIME = 0.10;
-	private final static double QUARTER = 0.25;
-	private final static double DOLLAR = 1.00;
-	
+public class Coin{	
 	private String name;
 	private double value;
 
-	public Coin(String name)
+	public Coin(double value)
 	{
-		this.name = name;
-		
-		if(name.equalsIgnoreCase("PENNY"))
+		this.value = value;
+		if(value == 0.01)
 		{
-			value = PENNY;
+			name = "Penny";
 		}
-		else if(name.equalsIgnoreCase("NICKEL"))
+		else if(value == 0.05)
 		{
-			value = NICKEL;
+			name = "Nickel";
 		}
-		else if(name.equalsIgnoreCase("DIME"))
+		else if(value == 0.10)
 		{
-			value = DIME;
+			name = "Dime";
 		}
-		else if(name.equalsIgnoreCase("QUARTER"))
+		else if(value == 0.25)
 		{
-			value = QUARTER;
+			name = "Quarter";
 		}
-		else if(name.equalsIgnoreCase("DOLLAR"))
+		else if(value == 1.00)
 		{
-			value = DOLLAR;
+			name = "Dollar Coin";
 		}
 		else
 		{
-			value = 0.0;
+			name = "?";
 		}
+		
 	}
 	
 	public double getValue()
@@ -50,23 +43,6 @@ public class Coin implements Comparable {
 	{
 		return name;
 	}
-	
-	public int compareTo(Object otherObject)
-	  {
-		  Coin otherCoin = (Coin) otherObject;
-		  if (getValue() < otherCoin.getValue())
-		  {
-			  return -1;
-		  }
-		  if (getValue() > otherCoin.getValue())
-		  {
-			  return 1;
-		  }
-		  else
-		  {
-			  return 0;
-		  }
-	  }
 	
 	public String toString()
 	{
