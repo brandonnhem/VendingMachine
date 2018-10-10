@@ -1,5 +1,14 @@
 package classes;
 
+/**
+ * Brandon Nhem
+ * Anthony Pham
+ * October 10, 2018
+ * Purpose: The driver program that tests all methods that project should be able to do
+ * Input: n/a
+ * Output: n/a
+ */
+
 import java.util.ArrayList;
 
 public class VendingMachineMain {
@@ -184,6 +193,39 @@ public class VendingMachineMain {
 		 * Trying to buy a coke with insufficient coins
 		 */
 			
+		if(machine.validateCoins(coins, coke) == 1)
+		{
+			System.out.print("You inserted ");
+			System.out.printf("%,.2f%n", coinTotal);
+			coins.clear();
+
+			Product temp = new Product(coke);
+			purchases.addPurchase(temp);
+			System.out.print("Thank you for purchasing " + coke.getName() + " for ");
+			System.out.printf("%,.2f%n", coke.getCost());
+
+		}
+		else if(machine.validateCoins(coins, coke) == 0)
+		{
+			System.out.print("You inserted ");
+			System.out.printf("%,.2f", coinTotal);
+			System.out.println(" for " + coke.getName());
+
+			System.out.println(machine.insufficientCoin());
+		}
+		else if(machine.validateCoins(coins, coke) == -1)
+		{
+			System.out.print("You inserted ");
+			System.out.printf("%,.2f", coinTotal);
+			System.out.println(" for " + coke.getName());
+			System.out.println(machine.outOfQuantity());
+		}
+		
+		Coin dollarCoin = new Coin(1.00);
+		coins.add(dollarCoin);
+		
+		coinTotal += dollarCoin.getValue();
+		
 		if(machine.validateCoins(coins, coke) == 1)
 		{
 			System.out.print("You inserted ");
